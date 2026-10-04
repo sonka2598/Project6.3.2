@@ -43,7 +43,7 @@ public:
     }
 
     int get_element(int index) {
-        if (index >= size) {
+        if (index < 0 || index >= size) {
             throw std::out_of_range("Index out of range");
         }
         return data[index];
